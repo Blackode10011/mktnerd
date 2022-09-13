@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="">
+
+<link rel="shortcut icon" href="./assets/img/nerdmkt.jpg" type="image/x-icon">
+
+    <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+ <script>
+   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+
+ </script>
+</head>
+<body>
+    
+    <style>
+        body{
+            background-color: rgba(67, 66, 66, 0.13);
+        }
+        .material-icons{
+          cursor: pointer;
+        }
+    </style>
+
+<style>
+    #modal1{
+        position: fixed;
+        top: 20%;
+        height: auto;
+        background-color: rgb(252, 103, 61);
+        
+    }
+    #modal2{
+        position: fixed;
+        top: 30%;
+        height: auto;
+        display: flex;
+        display: none;
+    }
+    .left{
+        padding: 10px;
+    }
+ 
+    input[type="checkbox"]:checked {
+  background: blue;
+  color: white;
+}
+#recover{
+  cursor: pointer;
+}
+</style>
+
+<!-- Modals -->
+<div id="modal1" class="modal">
+ 
+  <div class="row">
+  
+   <div class="col  left">
+       <strong style="color: #fff;">Bem Vindo!</strong>
+       <p id="userName" style="color: #fff; font-weight: bold; font-size: 20px;"></p>
+       <small style="color: #fff; font-size: 16px;">Seja bem Vindo!</small>
+   </div>
+
+   <div class="col s6" style="background-color: #fff; width: 100%;">
+       <p style="font-size: 17px; font-weight: bold; color:rgb(70, 70, 70);">Login</p>
+
+       <div class="row">
+           <div class="input-field col s6">
+             <input placeholder="@gmail.com" id="user" type="text" class="validate">
+             <label class="active" for="user">Usuário</label>
+           </div>
+         </div>
+
+         <div class="row">
+           <div class="input-field col s6">
+             <input placeholder="********" id="pass" type="text" class="validate">
+             <label class="" for="pass">Senha</label>
+           </div>
+         </div>
+
+<form action="#">
+   <p>
+       <label>
+           <input type="checkbox" class="filled-in" id="ch" checked="checked" />
+           <span>Lembra usuário</span>
+       </label>
+     </p>
+</form>
+
+<div class="row">
+   
+   <div class="col s6"><label for="#" id="recover">Esqueci minha senha</label></div>
+   <div class="col s6"><a href="#" class="waves-effect waves-dark btn" id="login"
+    style="width: 120px; 
+  ">Entrar</a></div>
+ </div>
+
+   </div>
+ </div>
+
+ </div>
+
+ <!-- 2 -->
+
+ <div class="modal" id="modal2">
+
+  <div style="background-color: rgb(252, 103, 61); color: #fff; text-align: center; width: 40px; height: 246px; position: absolute;">
+   <i class="material-icons" id="goBackModal">chevron_left</i>
+  </div>
+
+  <div style="padding-left: 20px; text-align: center; width: 100%;">
+   <strong style="color: rgb(85, 85, 85); font-size: large; font-weight: bold;">Recuperação de Senha</strong>
+<p>De qual usuário deseja recuperar a senha?</p>
+
+
+<div class="container" style="text-align: center;">
+  <div class="input-field col s6">
+    <input value="@gmail.com" id="userGet" type="text" class="validate">
+    <label class="active" for="userGet">Usuário</label>
+  </div>
+</div>
+Certo, como deseja fazer a recuperação de senha desse usuáro?
+
+
+
+<div class="row">
+  
+  <div class="col s6"><p>
+   <form action="#">
+    <label>
+      <input type="checkbox" class="filled-in" checked="checked" />
+      <span>E-mail</span>
+    </label>
+  </p>
+   </form>
+  
+  </div>
+  <div class="col s6"> <a href="#" class="waves-effect waves-dark btn sendAccountData" style="width: 150px;
+  margin-top: 10px;" id="positive-button">Enviar</a></div>
+</div>
+
+
+
+  </div>
+
+ </div>
+<!-- Modals -->
+
+
+
+
+  <footer style="position: fixed; position: fixed; bottom: 0; padding-left: 15px; width: 100%;
+  padding-bottom: 10px; background-color: rgba(161, 161, 161, 0.712); padding-top: 5px;">
+    <img src="./assets/img/NERDMKT.png" width="50" height="50l" alt="" srcset="">
+    <span style="color: rgb(82, 82, 82); margin-left: 10px;">Todos os direitos reservados: 2023</span>
+  </footer>
+
+
+<!--Firebase SDK-->
+
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"> </script> 
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
+
+<!--Firebase SDK-->
+
+<script src="./assets/services/firebase-connection.js"></script>
+
+<!-- Actions of the page -->
+<script src="./assets/js/app.js"></script>
+<!-- Actions of the page -->
+
+
+
+</body>
+</html>

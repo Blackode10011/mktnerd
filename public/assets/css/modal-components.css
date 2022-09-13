@@ -1,0 +1,12 @@
+/* Aside bar */
+#aside-settings{
+    z-index: 2;
+    position: fixed;
+    width: auto;
+    margin-left: 1100px;
+    top: 60px;
+    height: 500vh;
+    padding-top: 10px;
+    padding-left: 10px;
+   float: right;
+}

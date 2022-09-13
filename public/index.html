@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerd MKT</title>
+
+<link rel="shortcut icon" href="./assets/img/nerdmkt.jpg" type="image/x-icon">
+<link rel="stylesheet" href="./assets/css/global.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/modal-components.css">
+<link rel="stylesheet" href="./assets/css/drop select design.css">
+<link rel="stylesheet" href="./assets/css/small calendar.css">
+
+
+<!-- Copy here Materialize -->
+    <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ <!-- jQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <!-- jQuery -->
+<!-- Copy here Materialize -->
+
+<body>
+   
+    <nav>
+        <div class="nav-wrapper" id="nav-wrapper">
+          <!-- <a href="#" class="brand-logo">Logo</a> -->
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#" style="background-color: #C1C7CF; position: absolute; left: 0;">
+                <i class="material-icons" id="menu" style="color: #000;">menu</i></a>
+            </li>
+<li style="left: 400px; position: absolute;">
+  <input type="search" name="search" id="searchOnMenu" placeholder="search..." style="width: 450px;">
+</li>
+
+            <li><a href="#"><i class="material-icons" id="support">headset_mic</i></a></li>
+            <li><a href="#" id="manageAccount">Manoel</a></li>
+            <li><a href=""><span  id="N">M</span></a></li>
+            <li><a href="#"><i class="material-icons" id="logOff">power_settings_new</i></a></li>
+          </ul>
+        </div>
+
+        <!-- 2 -->
+        <ul id="deviceMenu">
+            <li><i class="material-icons" id="menu" style="margin-left: 15px;">menu</i></li>
+            <li style="position: absolute; right: 60px;"><i class="material-icons" id="support">headset_mic</i></li>
+            <li style="position: absolute; right: 150px;"><a href="#" id="manageAccount">Manoel</a></li>
+            <li style="position: absolute; right: 90px;"><a href=""><span  id="N">M</span></a></li>
+            <li style="float: right;"><a href="#"><i class="material-icons" id="logOff">power_settings_new</i></a></li>
+        </ul>
+
+        <!-- 2 -->
+
+      </nav>
+
+      <!-- Sidenav -->
+      <ul id="slide-out" class="sidenav">
+       <li style="display: flex;">
+        <a href=""><i class="material-icons">home</i></a>
+<a href=""><span>Início</span></a>
+<li><div class="divider"></div></li>
+       </li>
+<li style="padding-left: 15px; padding-right: 15px;">
+    <input type="search" name="search" id="search" placeholder="Search...">
+</li>
+<li>
+    <div class="divider"></div></li>
+<label style="float: right; margin-right: 5px;">mais acessados...</label>
+
+<!-- The most accessed should appera here... -->
+    <li><a href="#!">Agenda</a></li>
+    <li><a href="#!">Clientes</a></li>
+    <li><div class="divider"></div></li>
+<!-- --- -->
+
+<li><a href="" class="waves-effect">Agenda</a></li>
+<li><a href="" class="waves-effect">Confirmação e Alertas</a></li>
+<li><a href="" class="waves-effect">Controle Protético</a></li>
+<li><a href="" class="waves-effect">Controle de Indicação</a></li>
+<li><a href="" class="waves-effect">Dashboard Analítico</a></li>
+<li><a href="" class="waves-effect">Área do Profissional</a></li>
+<li><a href="" class="waves-effect">Financeiro</a></li>
+<li><div class="divider"></div></li>
+<li><a href="" class="waves-effect"><i class="material-icons">settings</i>Configuração</a></li>
+      </ul>
+
+
+      <div class="li" style="position: absolute; margin-top: 50px; padding: 10px;">
+        <h5>Olá <Strong>Manoel , </Strong> <small>boa tarde!</small></h5>
+      </div>
+
+
+<div class="row" style="position: absolute; margin-top: 120px; width: 100%; text-align: center;">
+    <div class="container row">
+
+        <div class="col s12 m6" style="width: 300px;">
+          <div class="card white darken-1" id="openAgenda">
+            <div class="card-content grey-text"> <i class="material-icons" style="background-color: rgb(252, 103, 61); 
+            color: white; font-size: 45px; padding: 4px; border-radius: 50px;">date_range</i>
+              <span class="card-title" style="color: rgb(73, 76, 78); font-weight: bold;">Agenda</span>
+              <p>Agende consultas, remarque e crie alertas de retorno para os clientes</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6" style="width: 300px;">
+            <div class="column" onclick="openTab('b1');" style="background:green;">
+
+            <div class="card white darken-1">
+               <!-- <div class="card white darken-1" id="openClientes"> -->
+              <div class="card-content grey-text"> <i class="material-icons" style="background-color: rgb(252, 103, 61);
+              color: white; font-size: 45px; padding: 4px; border-radius: 50px;">people</i>
+                <span class="card-title" style="color: rgb(73, 76, 78); font-weight: bold;">Clientes</span>
+                <p>Visualize o prontuário dos clientes bem como os detalhes de tratamento.</p>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6" style="width: 300px;">
+            <div class="card white darken-1">
+              <div class="card-content grey-text"> <i class="material-icons" style="background-color: rgb(252, 103, 61); 
+              color: white; font-size: 45px; padding: 4px; border-radius: 50px;">insert_chart</i>
+                <span class="card-title" style="color: rgb(73, 76, 78); font-weight: bold;">Financeiro</span>
+                <p>Faça a gestão financeira da sua empresa, acompanhe entradas e saídas diárias.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6" style="width: 300px;">
+            <div class="card white darken-1">
+              <div class="card-content grey-text"> <i class="material-icons" style="background-color: rgb(252, 103, 61); 
+              color: white; font-size: 45px; padding: 4px; border-radius: 50px;">assignment_ind</i>
+                <span class="card-title" style="color: rgb(73, 76, 78); font-weight: bold;">Profissionais</span>
+                <p>Cadastre novos profissionais e acesse o perfil de cada um.</p>
+              </div>
+            </div>
+          </div>
+
+<div class="col s12 m6" style="width: 300px;">
+    <div class="card white darken-1">
+      <div class="card-content grey-text"> <i class="material-icons" style="background-color: rgb(252, 103, 61); 
+      color: white; font-size: 45px; padding: 4px; border-radius: 50px;">assignment</i>
+        <span class="card-title" style="color: rgb(73, 76, 78); font-weight: bold;">Relatórios</span>
+        <p>Acompanhe as métricas gerais de sua clínica com relatórios detalhados.</p>
+      </div>
+    </div>
+  </div>
+
+      </div>
+
+</div>
+      
+<style>
+  table{
+    width: 100%;
+    float: left;
+    box-shadow: 1px 1px 2px;
+  }
+</style>
+
+<!-- Open Modal Calendar -->
+<div class="dv" style="width: 100%; background-color:rgb(255, 255, 255);
+position: fixed; z-index: 1;  margin-top: 80px; position: fixed; display: none;
+ overflow: scroll; height: 540px;
+box-shadow: 1px 1px 2px; padding: 10px;">
+  <div class="body" style="display: flex;">
+  
+<div class="line1">
+  <input type="date" name="" id="">
+  <!-- Small calendar -->
+  <div class="container calendar"
+     style="background-color: rgb(255, 255, 255); 
+     box-shadow: 1px 1px 2px; 
+     width: 250px;">
+        <div class="month">
+    <ul style="display: flex;">
+        <li id="monthString" style="color: rgb(41, 41, 41);
+         font-weight: bold; margin-left: 5px;">September</li>
+        <li ><span style="margin-left: 5px;" id="yearString">2022</span></li>
+    
+            <li class="prev"><i class="material-icons"
+                 style="float: right; margin-left: 40px;" id="prev">chevron_left</i></li>
+        <li class="next"><i class="material-icons" 
+            style="float: right;" id="next">chevron_right</i></li>
+      
+   
+</ul>
+</div>
+
+<style>
+  .weekdays{
+    background-color: #f0f0f0;
+  }
+  .days li{
+border: 1px solid #568;
+margin: 1px;
+cursor: pointer;
+  }
+.days li:hover{
+  background-color: rgb(207, 209, 212);
+  color: #000;
+}
+</style>
+<ul class="weekdays" style="text-align: center; align-items: center;
+ justify-content: center;
+ display: flex; width: 100%;">
+    <li>Mo</li>
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+  </ul>
+  
+  <ul class="days" style=" text-align: center; font-size: 30px;" id="dates-insert">  
+    <!-- <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li><span class="active">10</span></li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li>28</li>
+    <li>29</li>
+    <li>30</li>
+    <li>31</li> -->
+  </ul>
+  
+
+    </div>
+
+  <!-- Small calendar -->
+  <strong>Profissionais</strong> <br>
+  <label for="#">dr. <span>Marcs Williams</span></label>
+</div>
+<div class="container" style="width: 100%; padding-left: 5px;">
+ 
+  <table style = "background-color: rgb(247, 247, 248);">
+    <tr>
+      <td><i class="material-icons waves-effect open-novaconsulta" style="background-color: rgb(134, 134, 130); border-radius: 50px; color: #000;">add</i></td>
+      <td><i class="material-icons waves-effect">add_alarm</i></td>
+      <td> <i class="material-icons waves-effect">print</i></td>
+      <td><i class="material-icons waves-effect">autorenew</i></td>
+      <td><label for="#">Hoje</label></td>
+      <td><i class="material-icons">chevron_left</i></td>
+      <td><i class="material-icons">chevron_right</i></td>
+      <td><strong>Quarta, 7 de Setembro 2022</strong></td>
+      <td><label for="#">Mês</label></td>
+      <td><label for="#">|</label></td>
+      <td><strong>Semana</strong></td>
+      <td><label for="#">|</label></td>
+      <td><label for="#">Dia</label></td>
+      <td><i class="material-icons open-aside-settings">settings</i></td>
+      <td><i class="material-icons waves-effect cls"
+          id="close-dv">close</i></td>
+    </tr>
+  </table>
+
+  <style>
+    table thead tr td{
+  background-color: rgb(231, 231, 231);
+  border:  1px solid rgb(175, 174, 173);
+  text-align: center;
+  color: rgb(90, 90, 90);
+  box-shadow: 1px 1px 2px;
+}
+  </style>
+<!-- Calendar table -->
+<table style="height: 700px;">
+<thead>
+    <tr>
+        <td>Horas</td>
+        <td>4 - Domingo</td>
+        <td>5 - Segunda</td>
+        <td>6 - Terça</td>
+        <td>7 - Quarta</td>
+        <td>8 - Quinta</td>
+        <td>9 - Sexta</td>
+        <td>10 - Sábado</td>
+    </tr>
+    
+</thead>
+<tbody id="hours-list">
+   
+</tbody>
+<tfoot>
+    <tr><td colspan="7" >dr. Manoel</td></tr>
+</tfoot>
+</table>
+</div>
+<!-- Calendar table-->
+
+  </div>
+</div>
+<!-- Open Modal Calendar -->
+
+
+  
+<!-- Aside Bar settings -->
+<div class="modal" id="aside-settings">
+  <label for="#"> <i class="material-icons close-aside-settings">chevron_right</i></label>
+  
+  <div class="body">
+     <!-- Switch -->
+     <div class="switch" style="margin-top: 50px;">
+      <label>
+        Mostrar demarcações
+        <input type="checkbox">
+        <span class="lever"></span>
+        On
+      </label>
+    </div>
+  <div class="divider" style="margin-top: 25px;"></div>
+    <!-- Disabled Switch -->
+    <div class="switch">
+      <label>
+       Lista de espera direto
+        <input  type="checkbox">
+        <span class="lever"></span>
+        On
+      </label>
+  
+  
+  <div class="divider" style="margin-top: 25px;"></div>
+  
+  
+    </div>
+  </div>
+  </div>
+      <!-- Aside bar Settings -->
+
+<!-- Continuous options for calendar -->
+<div class="modal novaconsulta" style="position: relative; z-index: 3; width: 100%; height: 600px;">
+  <div class="header" style="width: 100%;">
+   <div class="line" style="background-color: rgb(238, 239, 240); height: 50px; padding: 5px;">
+    <span style="font-size: 20px; font-weight: bold;">Nova consulta</span>
+    | <a href="#" style="color: #000;">Compromisso</a> | <a href="#" style="color: #000;">Event</a>
+    <i class="material-icons close-novaconsulta cls" style="float: right;">close</i>
+   </div>
+    <div class="divider"></div>
+
+    <div class="body" style="margin-bottom: 10px;">
+
+      <div class="row">
+
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="material-icons prefix">search</i>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Paciente</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix">email</i>
+              <input id="icon_email" type="email" class="validate">
+              <label for="icon_telephone">Email</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix">phone_android</i>
+              <input id="icon_telephone" type="tel" class="validate">
+              <label for="icon_telephone">Telephone</label>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- Row -->
+      </div>
+
+      <style>
+        .s6{
+          border:  1px solid rgb(134, 134, 130);
+          width: 200px;
+          display: flex;
+        }
+        #form{
+          margin-left: 10px;
+        }
+      </style>
+<!-- h10 -->
+      <!-- Body -->
+      <div style="display: flex; width: 100%;">
+       
+        <div class="container">
+          <!-- Page Content goes here -->
+          <div class="row" style="width: 100%;">
+         
+            <div class="col s6">
+              <i class="material-icons">info</i><label for="#">Informação</label>
+              <select name="s1" id="s1">
+                <option value="Um dia antes">Um dia antes</option>
+                <option value="Uma semana antes">Uma semana antes</option>
+                <option value="No dia">No dia</option>
+                <option value="Enviar agora">Enviar agora</option>
+              </select>
+
+              <form action="#" id="form">
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Clini.me</span>
+                  </label>
+                </p>
+              </form>
+              <form action="#" id="form">
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>sms <br> <small>0/50</small></span>
+                  </label>
+                </p>
+              </form>
+              <form action="#" id="form">
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Email</span>
+                  </label>
+                </p>
+              </form>
+            </div>
+          
+
+
+
+            <div class="col s6">
+              <i class="material-icons">info</i><label for="#">Alerta de Consulta</label>
+              <select name="s1" id="s1">
+                <option value="Um dia antes">Um dia antes</option>
+                <option value="Uma semana antes">Uma semana antes</option>
+                <option value="No dia">No dia</option>
+                <option value="Enviar agora">Enviar agora</option>
+              </select>
+
+              <form action="#" id="form">
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Clini.me</span>
+                  </label>
+                </p>
+              </form>
+              <form action="#" id="form">
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>sms <br> <small>0/50</small></span>
+                  </label>
+                </p>
+              </form>
+              <form action="#" id="form">
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Email</span>
+                  </label>
+                </p>
+              </form>
+            </div>
+
+            <div class="row">
+              <div class="col s12">Dados extras</div>
+              <div class="col s6">
+                <form action="#" id="form">
+                  <p>
+                    <label>
+                      <input type="checkbox" class="filled-in"/>
+                      <span>Primeira Consuta</span>
+                    </label>
+                  </p>
+                </form>
+              </div>
+              <div class="col s6">
+                <form action="#" id="form">
+                  <p>
+                    <label>
+                      <input type="checkbox" class="filled-in"/>
+                      <span>Múltiplo Agendamento</span>
+                    </label>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">assignment</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Procedimentos</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="row" style="float: left; width: 100%; display: flex;">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">label</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Obs</label>
+                  </div>
+                </div>
+              </form>
+
+<!-- Custom select created -->
+             <div class="waves-effect" id="openCustomSelect"  
+      style=" width: 100px; 
+      position: absolute; right: 25px; top: 86%;">
+<label for="#" id="open-category"
+ style="font-weight: bold; cursor: pointer;">Categoria</label> 
+<i class="material-icons" style="float: right;">arrow_drop_down</i>
+<div class="divider"></div>
+             </div>
+
+             <!--  -->
+             <div class="modal" id="categoryModal" 
+style="padding: 5px; background-color: #dededf;
+ position: fixed; z-index: 5; 
+ top: 20%; width: 350px;
+  margin-left: 60%;">
+<ul>
+  <li style="background-color: 3890; padding: 3px;">
+    <i class="material-icons waves-effect closeCategoryModal"
+    style="float: right; background-color: #cccecf; 
+    padding: 1px; border-radius: 50px; position: absolute; right: 0; top: 0px; z-index: 50;">close</i>
+  </li>
+  <di class="divider"></di>
+  <li>
+   <span style="margin-left: 10px;">Avaliação</span>
+   <i class="material-icons" style="color: rgba(255, 251, 19, 0.568); float: left;">label</i> 
+   <i class="material-icons i-edit" style="float: right;" id = "Avaliação">edit</i>
+   <i class="material-icons i-delete" style="float: right; margin-right: 10px;">delete</i>
+  </li>
+  
+  <li>
+    <span style="margin-left: 10px;">Cirurgia</span>  <i class="material-icons" style="color: rgba(110, 10, 89, 0.568); float: left;">label</i> 
+    <i class="material-icons i-edit" style="float: right;" id = "Cirurgia">edit</i>
+   <i class="material-icons i-delete" style="float: right; margin-right: 10px;">delete</i>
+  </li>
+   <li>
+    <span style="margin-left: 10px;">Consulta</span>  <i class="material-icons" style="color: rgba(19, 247, 255, 0.568); float: left;">label</i> 
+    <i class="material-icons i-edit" style="float: right;" id = "Consulta">edit</i>
+   <i class="material-icons i-delete" style="float: right; margin-right: 10px;">delete</i>
+  </li>
+   <li>
+    <span style="margin-left: 10px;">Ortodontia</span>  <i class="material-icons" style="color: rgba(74, 255, 19, 0.568); float: left;">label</i> 
+    <i class="material-icons i-edit" style="float: right;" id = "Ortodontia">edit</i>
+   <i class="material-icons i-delete" style="float: right; margin-right: 10px;">delete</i>
+  </li>
+   <li>
+    <span style="margin-left: 10px;">Periódico</span>  <i class="material-icons" style="color: rgba(255, 133, 19, 0.568); float: left;">label</i> 
+    <i class="material-icons i-edit" style="float: right;" id = "Periódico">edit</i>
+   <i class="material-icons i-delete" style="float: right; margin-right: 10px;">delete</i>
+  </li>
+   <li>
+    <span style="margin-left: 10px;">Retorno</span>  <i class="material-icons" style="color: rgba(102, 101, 71, 0.568); float: left;">label</i> 
+    <i class="material-icons i-edit" style="float: right;" id = "Retorno">edit</i>
+    <i class="material-icons i-delete" style="float: right; margin-right: 10px;">delete</i>
+  </li>
+   <li>
+    <span style="margin-left: 10px;">Tratamento de Canal</span>  <i class="material-icons" style="color: rgba(41, 31, 175, 0.568); float: left;">label</i> 
+    <i class="material-icons i-edit" style="float: right;" id = "Tratamento">edit</i>
+   <i class="material-icons i-delete" style="float: right; margin-right: 10px;">delete</i>
+  </li>
+
+   <li>
+    
+    <div class="divider"></div>
+    <div class="row">
+<div class="col s12 waves-effect open-createNewCategory">
+  <script>
+
+  </script>
+   <i class="material-icons">add</i> <span style="margin-right: 10px; float: right;">Criar nova...</span>
+</div>
+    </div>
+   
+    
+   </li>
+
+</ul>
+</div>
+<!--  -->
+<!-- Remove category -->
+<div class="modal removeCategoryList" style="top: 40%; position: fixed; z-index: 5;">
+  <div class="header"  style="padding: 10px;">
+<span style="font-size: 17px; font-weight: bold;">Confirmar</span> 
+<i class="material-icons waves-effect i-closeDeleteCategory i-close-round" style="float: right; margin-right: 10px;">close</i>
+  </div>
+  <div class="divider"></div>
+  <div class="body" style="margin-top: 30px;">
+    <label style="margin-left: 15px;">Deseja deletar esta categoria?</label>
+<div class="container">
+  <div class="row">
+    <div style="text-align: right;">
+      <a href="#" class="waves-effect waves-dark btn close-removeCategoryList" id="negative-button">Deletar</a> 
+      <a href="#" class="waves-effect waves-dark btn i-saveColor" style="margin-left: 15px;" id="positive-button">Ok</a>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<!-- Remove category -->
+<!-- Add new category -->
+<div class="modal add-newColorCategoryList" id="add-newColorCategoryList" 
+style="top: 15%; position: fixed; z-index: 5;
+  height: auto;">
+  <div class="header"  style="padding: 10px;">
+<span style="font-size: 17px; font-weight: bold;">Editar Categoria</span> 
+<i class="material-icons waves-effect i-closeNewColorCategoryList i-close-round" 
+style="float: right; margin-right: 10px;">close</i>
+  </div>
+  <div class="divider"></div>
+  <div class="body" style="margin-top: 30px;">
+   
+   
+        <label class="active" for="first_name2" style="margin-left: 5px;">Descrição</label>      
+        <textarea id="desc-Color" class="materialize-textarea" placeholder="descrição..."
+        style="padding-left: 5px;"></textarea>
+ 
+        <div class="divider"></div>
+        
+        <style>
+ #category-Color-List-Li:hover{
+border: 1px solid rgba(145, 144, 144, 0.342);
+}
+        </style>
+        <div class="waves-effect col s12" style="background-color: rgb(255, 189, 8);" id="open-ColorList">
+          <label for="#" style="margin-left: 15px;">Escolha uma cor</label>
+        <i class="material-icons" style="float: right;">arrow_drop_down</i>
+        </div>
+        <br>
+       <!-- id="category-Color-List-Li" -->
+        <ul id="category-Color-List" 
+        style=" overflow: scroll; height: 200px; width: 100%; display: none;">
+       
+        </ul>
+       
+        <div class="row" style="margin-top: 15px; padding-right: 10px;">
+          <div style="text-align: right;">
+            <a href="#" class="waves-effect waves-dark btn close-newColorCategoryList" 
+            id="negative-button">Cancelar</a> 
+            <a href="#" class="waves-effect waves-dark btn saveChoosedColor" 
+            style="margin-left: 15px;" id="positive-button">Ok</a>
+          </div>
+  </div>
+<script>
+  //  Creating various colors for tag
+   let colorsNum = 100;
+    // let colors = [1,2,3,4,5,6,56,12,34,07,78,45,344,768,12,456,890,12,324,567,390,468,2,4,08,467,06,89,57,69,34,095,89,2,985,90,567,4609,000,00,0,799,66,77,345,445,556,334,90,678,89,59,00,05,590,090,5050]
+    
+     for(let i = 0; i <= colorsNum; i++){
+      let a = Math.floor(Math.random()*999)
+     let b = Math.floor(Math.random()*999)
+     let c = Math.floor(Math.random()*999)
+    //  document.getElementById("category-Color-List").innerHTML += `<li id="category-Color-List-Li" 
+    //   style ="background-color: rgb(`+colors[i]+`, `+colors[i]+`, `+colors[i]+`);">`+i+`</li>`
+    //   console.log(i)
+    document.getElementById("category-Color-List").innerHTML += `<li id="category-Color-List-Li" 
+      style ="background-color: rgb(`+a+`, `+b+`, `+c+`); cursor: pointer;" a = `+a+` b = `+b+` c = `+c+`>`+i+`</li>`
+     }
+   
+    
+
+</script>
+</div>
+<!-- Add new category -->
+<!-- Custom selecet created -->
+            </div>
+            <!--  -->
+
+            <!--  -->
+          </div>
+        </div>
+  
+
+      </div>
+
+      <!-- Body -->
+    </div>
+    <!-- Header -->
+  </div>
+  <!-- Modal nova consulta -->
+</div>
+<!-- Continuous options for calendar -->
+
+
+
+<script>
+// $("#datepicker").datepicker({
+	// Формата на датата може да смениш като ползваш:
+	// http://api.jqueryui.com/datepicker/#utility-formatDate
+	// dateFormat: "yy-mm-dd",
+	
+	// Тази функция се вика като се кликне на определена дата
+	// Можеш да симулираш линк по този начин.
+	// onSelect: function (date) {
+		// M.toast({html: "Date is " + date});
+		// Можеш да отидеш на линк с:
+		// window.location = "http://google.com/?date=" + date;
+	// }
+// });
+
+const date  = new Date() // $("#datepicker").datepicker( 'getDate' )
+var weeks =  ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+console.log(date.getDate(), weeks[date.getDay()], date.getFullYear())
+
+</script>
+
+
+<div class="footer">
+    <a href="#"><img src="./assets/img/nerd.png" alt="" srcset="" width="30" height="30"></a>
+ <a href="#"><label>Nerd MTK</lable></a>
+    <i class="material-icons" style="right: 15px; position: absolute; color: #7a7c7e;">message</i>
+</footer>
+
+    <!--Firebase SDK-->
+
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"> </script> 
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
+
+<!--Firebase SDK-->
+
+<script src="./assets/services/firebase-connection.js"></script>
+
+<!-- Actions of the page -->
+<script src="./assets/js/index.js"></script>
+<script src="./assets/materialize/script.js"></script>
+<script src="./assets/js/device.js"></script>
+<script src="./assets/js/actions.js"></script>
+<script src="./assets/js/calendar.js"></script>
+<script src="./assets/js/calendar insert.js"></script>
+
+
+</body>
+</html>

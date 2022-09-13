@@ -1,0 +1,31 @@
+.material-icons{
+    cursor: pointer;
+}
+.m6, .card{
+    cursor: pointer;
+    height: 230px;
+    min-width: 160px;
+    max-width: 368px;
+    margin-top: 10px;
+}
+.card:hover{
+  border: 1px solid rgb(252, 103, 61);
+  box-shadow: 2px 2px 3px;
+}
+.scrollable-element {
+    scrollbar-color: rgb(82, 80, 80) rgb(66, 66, 66);
+  }
+  /* Buttons color */
+  #positive-button, #login{
+    background-color: rgb(252, 103, 61);
+  }
+  #negative-button{
+background-color: rgb(59, 58, 58);
+color:#fff ;
+  }
+  /* i-close-round */
+  .i-close-round{
+    background-color: rgb(226, 222, 222);
+    border-radius: 50px;
+    padding: 3px;
+  }
